@@ -1,6 +1,7 @@
 const mongoose = require('mongoose');
+require('dotenv').config();
 
-mongoose.connect("mongodb://localhost:27017/employee-api");
+mongoose.connect(process.env.REMOTE_DB_URL);
 const db = mongoose.connection;
 
 db.on("connected", function () {
