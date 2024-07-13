@@ -9,7 +9,7 @@ const PORT=process.env.PORT;
 const app = express();
 app.use(bodyParse.json());
 app.use(cors({
-    origin: 'http://localhost:5173',
+    origin: 'http://localhost:3000',
     optionsSuccessStatus: 200
 }));
 app.use('/employee', employeeRouter);
